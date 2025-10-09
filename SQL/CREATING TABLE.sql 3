@@ -1,0 +1,22 @@
+CREATE TABLE employee(
+    employee_id SERIAL PRIMARY KEY,
+	name VARCHAR(100) NOT NULL,
+	position VARCHAR (50),
+	deparment VARCHAR(50),
+	hire_date DATE,
+	salary NUMERIC(10,2)
+	
+);
+
+
+
+SELECT *FROM employee;
+
+INSERT INTO employee(name,position,deparment,hire_date,salary)
+VALUES('ajay','Data Analyst','Data science','2022-05-15',65000.00),
+      ('jonna','software','IT','2021-09-20',75000.00),
+	  ('nuthan','HR Manager','Human Resourse','2019-03-10',82000.00),
+	  ('sruthi','Marketing Specialist','Marketing','2020-11-25',58000.00),
+	  ('shashi','Sales Executive','Sales','2023-02-12',62000.00);
+
+

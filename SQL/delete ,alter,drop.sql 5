@@ -1,0 +1,44 @@
+CREATE TABLE employee3(
+    employee_id INT PRIMARY KEY,
+	name VARCHAR(100) NOT NULL,
+	position VARCHAR (50),
+	deparment VARCHAR(50),
+	hire_date DATE,
+	salary NUMERIC(10,2)
+	
+);
+
+
+
+SELECT *FROM employee3;
+
+INSERT INTO employee3(employee_id,name,position,deparment,hire_date,salary)
+VALUES(101,'ajay','Data Analyst','Data science','2022-05-15',65000.00),
+      (102,'jonna','software','IT','2021-09-20',75000.00),
+	  (103,'nuthan','HR Manager','Human Resourse','2019-03-10',82000.00),
+	  (104,'sruthi','Marketing Specialist','Marketing','2020-11-25',58000.00),
+	  (105,'shashi','Sales Executive','Sales','2023-02-12',62000.00);
+
+	  
+/*DELETE is used to delete entire row  . We use WHERE to locate the  row to perform the query. */
+/* DELETE is used to delete only row.*/
+/*HERE  WE USED DELETE TO DELETE THE ENTIRE ROW.*/ 
+
+
+DELETE FROM employee3
+WHERE employee_id=103;
+
+
+/*ALTER is used to delete with spefic column. */
+
+/*DROP is used to delete column or table or database. */
+
+ALTER TABLE employee3
+DROP COLUMN salary;
+
+
+DROP TABLE IF EXISTS employee3;
+/* It is used to delete total table ,if table exists it will be delete.*/
+
+DROP  DATABASE EXISTS employee3;
+/*It is used to delete total database.*/
